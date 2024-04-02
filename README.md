@@ -52,7 +52,8 @@ RegisterNumber:212223220032
 
 
 ## RTL realization
-![312535957-dbd64921-6857-40ee-a21b-55fa17e9f89b](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/cea0accb-23b6-4128-a4ba-a35f0ea2ebc3)
+![312535957-dbd64921-6857-40ee-a21b-55fa17e9f89b](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/65c83896-b73c-4b0e-95b0-e06cf01431f7)
+
 
 ## Truth table
 ![312536822-849f41b1-394f-48f4-b451-88315b927f79](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/d9bd1959-6e0a-4a5b-b6bb-3b930c0c71e3)
