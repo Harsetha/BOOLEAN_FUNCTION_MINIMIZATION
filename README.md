@@ -35,33 +35,45 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: HARSETHA J
+module Boolean_min(a,b,c,d,w,x,y,z,f1,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u;
+not(adash,a);
+not(bdash,b);
+not(cdash,c);
+not(ddash,d);
+and(p,bdash,ddash);
+and(q,adash,b,d);
+and(r,a,b,cdash);
+or(f1,p,q,r);
+not(ydash,y);
+and(s,ydash,z);
+and(t,x,y);
+and(u,w,y);
+or(f2,s,t,u);
+endmodule
+
+
+Developed by:HARSETHA J
 RegisterNumber:212223220032
-## program
-## module combinationalcircuit(A,B,C,D,F1);
-## input A,B,C,D;
-## output F1;
-## wire x1,x2,x3,x4,x5;
-## assign x1=(~A)&(~B)&(~C)&(~D);
-## assign x2=(A)&(~C)&(~D);
-## assign x3=(~B)&(C)&(~D);
-## assign x4=(~A)&(B)&(C)&(D);
-## assign x5=(B)&(~C)&(D);
-## assign F1=x1|x2|x3|x4|x5;
-## endmodule 
 
 
-## RTL realization
-![312535957-dbd64921-6857-40ee-a21b-55fa17e9f89b](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/65c83896-b73c-4b0e-95b0-e06cf01431f7)
+
+**RTL realization**
+![316316875-735f5bd3-cf3b-4c34-b2fb-f50eafa8de7d](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/24685bcd-0d4f-48a7-830a-19f28126bd44)
 
 
-## Truth table
-![312536822-849f41b1-394f-48f4-b451-88315b927f79](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/d9bd1959-6e0a-4a5b-b6bb-3b930c0c71e3)
+**Output:**
+![316316898-88ef005e-96dc-4f77-9439-1a922ea69501](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/22f104b0-6a3c-435b-a540-f301ae73c17a)
 
 
-## Timing Diagram
-![312537126-533d1307-308c-4a6d-9495-b6f289bf8479](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/b62feab3-485b-43e2-a0e3-19462c11c108)
 
+**RTL**
+![316316854-a881cd5b-0761-4f38-b95c-51f1e0358077](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/84629c21-d654-4bab-b133-20b5d6e57fa9)
+
+
+**Timing Diagram**
 
 ## Result:
 
