@@ -35,45 +35,47 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-module Boolean_min(a,b,c,d,w,x,y,z,f1,f2);
-input a,b,c,d,w,x,y,z;
-output f1,f2;
-wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u;
-not(adash,a);
-not(bdash,b);
-not(cdash,c);
-not(ddash,d);
-and(p,bdash,ddash);
-and(q,adash,b,d);
-and(r,a,b,cdash);
-or(f1,p,q,r);
-not(ydash,y);
-and(s,ydash,z);
-and(t,x,y);
-and(u,w,y);
-or(f2,s,t,u);
-endmodule
+## program
+~~~
 
+module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
 
 Developed by:HARSETHA J
 RegisterNumber:212223220032
+~~~
+
+
+## Logic Symbol and Truth table
+![319427043-ab520f8d-0d6f-4bb9-96e6-33968a037418](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/8089fdc2-49f7-405b-a6d1-e27b5c6c8838)
+
+![319427157-21cb2aef-7529-4ced-a473-68b7a9e53d62](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/7f628536-30d8-4824-860a-e019f455d055)
+
+
+## RTL realization output
+![319427331-4d407a87-3dc2-49e6-bea8-bb7683f1857d](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/b08ca065-6de6-42f1-93c2-c0984b56fd4c)
 
 
 
-**RTL realization**
-![316316875-735f5bd3-cf3b-4c34-b2fb-f50eafa8de7d](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/24685bcd-0d4f-48a7-830a-19f28126bd44)
+## RTL
+![319427514-042b4487-4220-4e63-a855-f1475debf723](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/7365b294-a94a-4a80-a474-0c574b2b7833)
 
 
-**Output:**
-![316316898-88ef005e-96dc-4f77-9439-1a922ea69501](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/22f104b0-6a3c-435b-a540-f301ae73c17a)
-
-
-
-**RTL**
-![316316854-a881cd5b-0761-4f38-b95c-51f1e0358077](https://github.com/Harsetha/BOOLEAN_FUNCTION_MINIMIZATION/assets/149985878/84629c21-d654-4bab-b133-20b5d6e57fa9)
-
-
-**Timing Diagram**
 
 ## Result:
 
